@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Kuppa</title>
+</head>
+
+<body>
+    <h1>Welcome to Cozy Kuppa</h1>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Kuppa website</title>
+    <style>
+        body {
+            background-color: #f5f5dc;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /*Navigation bar */
+        .navbar {
+            background-color: #8b5e3c;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: yellow;
+        }
+
+        /*center section */
+        .center {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        img {
+            width: 300px;
+            height: auto;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--menu-->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#online">Online</a>
+    </div>
+
+    <!--message+photo-->
+    <div class="center">
+        <h1>Welcome to Cozy Kuppa webiste</h1>
+        <p>| created this using HTML & CSS |</p>
+        <!--you can replace this link with your oewn image link-->
+        src=https://www.google.com/search?q=cozy+coffee+shop&rlz=1C1GCEU_enUS832US832&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiYpJvM8Pj4AhVQheYKHX5DAmIQ_AUoAXoECAEQAw&biw=1366&bih=657#imgrc=YlK3vX9Zf0T6DM
+
+        <img src="cozy_kuppa.jpg" alt="Cozy Kuppa">
+    </div>
+</body>
+
+</html>
+<a href="login.html">Login</a>
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+<button onclick="login()">Login</button>
+<script>
+    function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        if (username === "user" && password === "pass") {
+            alert("Login successful!");
+        } else {
+            alert("Invalid credentials. Please try again.");
+        }
+    }
+</script>
+<a href="singup.html">Sign Up</a>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signup-box {
+            background-color: white;
+            padding: 30px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #8b5e3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #a67855;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup-box">
+        <h2>create Account</h2>
+        <input type="text" id="new-username" placeholder="Username">
+        <input type="password" id="new-password" placeholder="Password">
+        <button onclick="signUp()">Sign Up</button>
+    </div>
+    <script>
+        function signUp() {
+            let user =
+                document.getElementById('new-username').value;
+            let pass =
+                document.getElementById('new-password').value;
+
+            if (newUsername && newPassword) {
+                alert("Sign Up successful! You can now log in.");
+            } else {
+                alert("Please fill in all fields.");
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+</body>
+
+</html>
+let savedUser =
+localStorage.getItem('savedUser');
+let savedPass =
+localStorage.getItem('savedPass');
+if(username === savedUser && password === savedPass) {
+alert("Login successful!");
+} else {
+alert("Invalid credentials. Please try again.");
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDER PAGE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaf6ff;
+            padding: 50px;
+        }
+
+        order-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        inpu,
+        seleclt,
+        button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #8b5e3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #a67855;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="order-box">
+        <h2>Place Your Order</h2>
+
+        <label>Your name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Product</label>
+        <select id="product">
+            <option>mobile</option>
+            <option>laptop</option>
+        </select>
+        <label>Quantity</label>
+        <input type="number" id="quantity" placeholder="Enter quantity">
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+    <script>
+        function placeOrder() {
+            let username =
+                document.getElementById('name').value;
+            let qty = document.getElementById('quantity').value;
+            let itemName = document.getElementById('product').value;
+            if (username && qty > 0) {
+                alert(`Order placed: ${qty} x ${itemName}`);
+            } else {
+                alert("Please enter a valid item name and quantity.");
+            }
+        }
+    </script>
+    if(userName===""|| product""==""|| qty==="") {
+    alert("Please fill in all fields.");
+    return;
+    }
+    //save order
+    localStorage.setItem('order', JSON.stringify({userName, product, qty}));
+    alert("Order placed successfully!");
+    </script>
+</body>
+
+</html>
+<a href="order.html">Order Now</a>
+<order-summary class="html"></order-summary>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="" UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0
+    <title>Order Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 50px;
+        }
+        .summary-box {
+            background-color: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        button{
+            width: 100%;
+            padding: 10px;
+            background-color: #8b5e3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #a67855;
+        }
+    </style>
+</head>
+<body>
+    <div class=" summary-box">
+    <h2>Order Summary</h2>
+
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Product:</strong> <span id="product"></span></p <p><strong>Quantity:</strong> <span id="quantity"></span>
+    </p>
+    <button onclick="" goBack()">Place New Order</button>
+    </div>
+    <script>
+        window.onload = function () {
+            document.getElementById("name").textContent = localStorage.getItem("orderName");
+            document.getElementById("product").textContent = localStorage.getItem("orderProduct");
+            document.getElementById("quantity").textContent = localStorage.getItem("orderQuantity");
+        }
+        function goBack() {
+            window.location.href = "order.html";
+        }
+    </script>
+    </body>
+
+</html>
+window.location.href = "order-summary.html";
+localStorage.setItem("orderName", userName);
+localStorage.setItem("orderProduct", product);
+localStorage.setItem("orderQuantity", qty);
+alert("Order placed successfully!");
+window.location.href = "order-summary.html";
+</script>
+<a href="order-summary.html">View Order Summary</a>
+function placeOrder() {
+let userName =
+document.getElementById('name').value;
+let qty = document.getElementById('quantity').value;
+let product = document.getElementById('product').value;
+if(userName===""|| product===""|| qty==="") {
+alert("Please fill in all fields.");
+return;
+}
+//save order
+
+localStorage.setItem('order', JSON.stringify({userName, product, qty}));
+//new Order object
+let newOrder = {
+name: userName,
+product: product,
+quantity: qty
+Date: new Date().toISOString()
+};
+//old orders from localStorage
+let oldOrders = JSON.parse(localStorage.getItem('orders')) || [];
+//new order add
+oldOrders.push(newOrder);
+//save back to localStorage
+localStorage.setItem('orders', JSON.stringify(oldOrders));
+alert("Order placed successfully!");
+window.location.href = "order-summary.html";
+}
+<order-history class="html">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <META charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0
+        <title>Order History</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f8ff;
+                padding: 50px;
+            }
+            .history-box {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 600px;
+                margin: auto;
+                table{
+                    width: 100%; border-collapse: collapse;
+                    margin: 20px 0;
+                    background-color
+                }
+                th, td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: left;
+                }
+                th {
+                    background-color: #8b5e3c;
+                    color: white;
+                }
+
+            }
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Order History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id=" order-history-body">
+        </tbody>
+        <script>
+            window.onload = function () {
+                let orders = JSON.parse(localStorage.getItem('orders')) || [];
+                let tbody = document.getElementById('order-history-body');
+                orders.forEach(order => {
+                    let row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${order.name}</td>
+                        <td>${order.product}</td>
+                        <td>${order.quantity}</td>
+                        <td>${new Date(order.Date).toLocaleString()}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            }
+        </script>
+
+        </body>
+
+    </html>
+    <p><strong>price:</strong> <span id="price"></span></p>
+    <p><strong>Total:</strong> <span id="total"></span></p //product price let price=0; if (product==="mobile" ) { user
+        addd price------- } else if (product==="laptop" ) { user addd price------ other products... } //When product
+        changes-- show price document.getElementById('product').addEventListener('change', updatePrice() { let
+        product=document.getElementById('product').value; let price ------- if (product==="mobile" ) { price --------- }
+        else if (product==="laptop" ) { price=------------ } document.getElementById('price').textContent=price; });
+        //When quantity changes - update total price document.getElementById('quantity').addEventListener('input',
+        updateTotal() { let price=parseFloat(document.getElementById('price').textContent) || 0; let
+        qty=parseInt(document.getElementById('quantity').value) || 0; let total=price * qty;
+        document.getElementById('total').textContent=total.toFixed(2); let
+        qty=parseInt(document.getElementById('quantity').value) || 0; let total=price * qty;
+        document.getElementById('total').textContent=total.toFixed(2); }); let total=productPrice * qty; let newOrder={
+        name: userName, product: product, quantity: qty, price: productPrice, total: total, Date: new
+        Date().toISOString() }; <th>Price</th>
+    <th>Total</th>
+    <td>${order.price}</td>
+    <td>${order.total}</td>
+    <a href="#" onclick="logout()">Logout</a>
+    <script>
+        function logout() {
+            //remove login data
+            localStorage.removeItem('savedUser');
+            localStorage.removeItem('savedPass');
+
+            alert("You have been logged out.");
+            window.location.href = "login.html";
+            //back to login page
+
+        }
+
+    </script>
+    index.html
+    <script>
+        if (localStorage.getItem('savedUser')) {
+            //redirect to order page if logged in
+            window.location.href = "order.html";
+        }
+    </script>
+    admin.html
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Panel</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f8ff;
+                padding: 50px;
+            }
+
+            .admin-box {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 600px;
+                margin: auto;
+            }
+
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+
+            th,
+            td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+
+            th {
+                background-color: #8b5e3c;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Admin panel-all orders</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="admin-order-body">
+            </tbody>
+        </table>
+        <a href="index.html" class=back-button">Back to Home</a>
+        <script>
+            window.onload = function () {
+                let orders = JSON.parse(localStorage.getItem('orders')) || [];
+                let tbody = document.getElementById('admin-order-body');
+                orders.forEach(order => {
+                    let row = document.createElement('tr');
+                    row.innerHTML = `
+                    <td>${order.name}</td>
+                    <td>${order.product}</td>
+                    <td>${order.quantity}</td>
+                    <td>${order.price}</td>
+                    <td>${order.total}</td>
+                    <td>${new Date(order.Date).toLocaleString()}</td>
+                `;
+                    tbody.appendChild(row);
+                });
+            }
+        </script>
+    </body>
+
+    </html>
+    </> (web icon) click on the -Add <Applet>
+    </Applet>
+    //your web app's firebase configuration
+    const firebaseConfig = {
+    apiKey: "
+    authDomain: ",
+    projectId: ",
+    storageBucket: ",
+    messagingSenderId: ",
+    appId: "
+    };
+    //Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    </script>
+    const firebaseConfig = {
+    apiKey: "
+    firebase.initalizeApp(firebaseConfig);
+    let db = firebase.firestore();
+    </script>
+    db.ref("orders").push(newOrder);
+    .then(() => {
+    alert("Order placed successfully!");
+    window.location.href = "order-summary.html";
+    })
+    .catch((error) => {
+    console.error("Error adding order: ", error);
+    alert("Failed to place order. Please try again.");
+    });
+    window.onload = function () {
+    let ordersRef = db.ref('orders');
+    ordersRef.on('value', (snapshot) => {
+    let orders = snapshot.val();
+    let tbody = document.getElementById('admin-order-body');
+    tbody.innerHTML = ''; //clear existing rows
+    for (let id in orders) {
+    let order = orders[id];
+    let row = document.createElement('tr');
+    row.innerHTML = `
+    <td>${order.name}</td>
+    <td>${order.product}</td>
+    <td>${order.quantity}</td>
+    <td>${order.price}</td>
+    <td>${order.total}</td>
+    <td>${new Date(order.Date).toLocaleString()}</td>
+    `;
+    tbody.appendChild(row);
+    }
+    });
+    }
